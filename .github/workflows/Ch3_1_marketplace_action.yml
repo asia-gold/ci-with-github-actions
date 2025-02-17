@@ -8,5 +8,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: DesigniteJava Action
-        uses: DesigniteTools/DJAction@v2.0
+      - name: Checkstyle for Java
+        uses: dbelyaev/action-checkstyle@v1.7.0
+
+
+
+ 
+          
