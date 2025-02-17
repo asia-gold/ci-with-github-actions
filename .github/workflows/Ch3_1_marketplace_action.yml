@@ -1,0 +1,12 @@
+name: Marketplace Action
+
+on: push
+
+jobs:
+  job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: DesigniteJava Action
+        uses: DesigniteTools/DJAction@v2.0
