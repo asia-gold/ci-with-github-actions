@@ -1,0 +1,21 @@
+name: First_Manually_Created
+
+on: push
+
+jobs:
+  job1:
+    name: First job
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Print out all env variables sorted
+      run: env | sort
+  job2:
+    name: Second job
+    runs-on: windows-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Print out all env variables sorted
+      run: "Get-ChildItem Env: | Sort-Object Name"
