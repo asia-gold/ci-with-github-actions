@@ -1,6 +1,10 @@
 name: First_Manually_Created
 
-on: push
+on:
+  # Changed the branch name, so the workflow will not be triggered all the time,
+  # cause this is just an education project
+  push:
+    branches: [ "test" ]
 
 jobs:
   job1:

@@ -1,0 +1,26 @@
+name: Challenge Workflow
+
+on: push
+
+jobs:
+  job_ubuntu:
+    name: Ubuntu Job
+    runs-on: ubuntu-latest
+    steps:
+    - run: date
+  job_windows:
+    name: Windows Job
+    runs-on: windows-latest
+    steps:
+    - run: date
+  job_mac:
+    name: Mac Job
+    runs-on: macos-latest
+    steps:
+    - run: date
+  dependent_job:
+    name: Job with dependency
+    needs: [job_ubuntu, job_windows, job_mac]
+    runs-on: ubuntu-latest
+    steps:
+    - run: date
