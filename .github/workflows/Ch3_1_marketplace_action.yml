@@ -1,6 +1,8 @@
 name: Marketplace Action
 
-on: push
+on:
+  push:
+    branches: [ "test" ]
 
 jobs:
   job:
