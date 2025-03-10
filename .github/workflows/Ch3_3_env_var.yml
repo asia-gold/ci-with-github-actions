@@ -1,11 +1,8 @@
 name: Environment Variables
-
 env:
   WORKSPACE_ENVIRONMENT_VARIABLE: 'Workspace Environment Variable'
   OVER_RIDE: 'Workflow'
-
 on: [push]
-
 jobs:
   ubuntu:
     env:
@@ -30,7 +27,6 @@ jobs:
           echo: "6. ${{JOB_ENVIRONMENT_VARIABLE}}"
           echo: "7. ${{STEP_ENVIRONMENT_VARIABLE}}"
           echo: "8. ${{OVER_RIDE}}"
-          
   windows:
     env:
       JOB_ENVIRONMENT_VARIABLE: 'Windows: Job Environment Variable'
