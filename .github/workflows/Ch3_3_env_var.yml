@@ -17,15 +17,16 @@ jobs:
         run: |
           echo: "Accessing environment variables using Shell syntax"
           echo: "1. ${{ env.WORKSPACE_ENVIRONMENT_VARIABLE }}"
-#          echo: "2. $JOB_ENVIRONMENT_VARIABLE"
-#          echo: "3. $STEP_ENVIRONMENT_VARIABLE"
-#          echo: "4. $OVER_RIDE"
-#          echo: ""
-#          echo: "-------------"
-#          echo: "Accessing environment variables using YAML syntax"
-#          echo: "6. ${{ JOB_ENVIRONMENT_VARIABLE }}"
-#          echo: "7. ${{ STEP_ENVIRONMENT_VARIABLE }}"
-#          echo: "8. ${{ OVER_RIDE }}"
+          echo: "2. ${{ env.JOB_ENVIRONMENT_VARIABLE }}"
+          echo: "3. ${{ env.STEP_ENVIRONMENT_VARIABLE }}"
+          echo: "4. ${{ OVER_RIDE }}"
+          echo: ""
+          echo: "-------------"
+          echo: "Accessing environment variables using YAML syntax"
+          echo: "5. ${{ WORKSPACE_ENVIRONMENT_VARIABLE }}"
+          echo: "6. ${{ JOB_ENVIRONMENT_VARIABLE }}"
+          echo: "7. ${{ STEP_ENVIRONMENT_VARIABLE }}"
+          echo: "8. ${{ OVER_RIDE }}"
   windows:
     env:
       JOB_ENVIRONMENT_VARIABLE: 'Windows: Job Environment Variable'
