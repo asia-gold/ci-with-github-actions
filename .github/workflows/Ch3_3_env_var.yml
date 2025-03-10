@@ -31,13 +31,7 @@ jobs:
           STEP_ENVIRONMENT_VARIABLE: 'Step Environment Variable for Shell'
           OVER_RIDE: 'Step'
         run: |
-          echo: "Accessing environment variables using Shell syntax"
-#          echo: "2. $env:JOB_ENVIRONMENT_VARIABLE"
-#          echo: "3. $env:STEP_ENVIRONMENT_VARIABLE"
-#          echo: "4. $env:OVER_RIDE"
-#          echo: ""
-#          echo: "-------------"
-#          echo: "Accessing environment variables using YAML syntax"
-#          echo: "6. ${{ JOB_ENVIRONMENT_VARIABLE }}"
-#          echo: "7. ${{ STEP_ENVIRONMENT_VARIABLE }}"
-#          echo: "8. ${{ OVER_RIDE }}"
+          echo "${{ env.WORKSPACE_ENVIRONMENT_VARIABLE }}"
+          echo "${{ env.JOB_ENVIRONMENT_VARIABLE }}"
+          echo "${{ env.STEP_ENVIRONMENT_VARIABLE }}"
+          echo "${{ env.OVER_RIDE }}"
