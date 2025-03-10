@@ -2,7 +2,9 @@ name: Environment Variables
 env:
   WORKSPACE_ENVIRONMENT_VARIABLE: 'Workspace Environment Variable'
   OVER_RIDE: 'Workflow'
-on: [push]
+on:
+  push:
+    branches: [ "test" ]
 jobs:
   ubuntu:
     env:
@@ -19,7 +21,7 @@ jobs:
           echo "${{ env.JOB_ENVIRONMENT_VARIABLE }}"
           echo "${{ env.STEP_ENVIRONMENT_VARIABLE }}"
           echo "${{ env.OVER_RIDE }}"
-                    echo "Accessing environment variables in run command"
+          echo "Accessing environment variables in run command"
           echo "$WORKSPACE_ENVIRONMENT_VARIABLE"
           echo "$JOB_ENVIRONMENT_VARIABLE"
           echo "$STEP_ENVIRONMENT_VARIABLE"
