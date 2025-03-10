@@ -19,7 +19,7 @@ jobs:
           echo: "1. ${{ env.WORKSPACE_ENVIRONMENT_VARIABLE }}"
           echo: "2. ${{ env.JOB_ENVIRONMENT_VARIABLE }}"
           echo: "3. ${{ env.STEP_ENVIRONMENT_VARIABLE }}"
-          echo: "4. ${{ OVER_RIDE }}"
+          echo: "4. ${{ env.OVER_RIDE }}"
           echo: ""
           echo: "-------------"
           echo: "Accessing environment variables using YAML syntax"
