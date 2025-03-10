@@ -15,11 +15,11 @@ jobs:
           STEP_ENVIRONMENT_VARIABLE: 'Step Environment Variable for Bash'
           OVER_RIDE: 'Step'
         run: |
-          echo: "Accessing environment variables using Shell syntax"
-          echo: "1. ${{ env.WORKSPACE_ENVIRONMENT_VARIABLE }}"
-          echo: "2. ${{ env.JOB_ENVIRONMENT_VARIABLE }}"
-          echo: "3. ${{ env.STEP_ENVIRONMENT_VARIABLE }}"
-          echo: "4. ${{ env.OVER_RIDE }}"
+          echo "${{ env.WORKSPACE_ENVIRONMENT_VARIABLE }}"
+          echo "${{ env.JOB_ENVIRONMENT_VARIABLE }}"
+          echo "${{ env.STEP_ENVIRONMENT_VARIABLE }}"
+          echo "${{ env.OVER_RIDE }}"
+
   windows:
     env:
       JOB_ENVIRONMENT_VARIABLE: 'Windows: Job Environment Variable'
