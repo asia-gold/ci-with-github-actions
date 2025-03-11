@@ -1,6 +1,8 @@
-name: Artifacts
+name: Artifacts Not Working
 
-on: [push]
+on:
+  push:
+    branches: [ "test" ]
 
 env:
   FILE_NAME: hello-server
